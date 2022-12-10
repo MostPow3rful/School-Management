@@ -215,7 +215,7 @@ class Config(Color):
         )
         RESULT = cursor.fetchall()
 
-        os.system('echo "" > log/log./log')
+        os.system('echo "" > log/log.log')
         with open(file="./json/Secret.json", mode="a") as file:
             file.write(
                 '{\n\t"username":"'+RESULT[0][0] +
