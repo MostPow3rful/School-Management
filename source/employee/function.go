@@ -16,7 +16,7 @@ import (
 )
 
 var (
-	err error
+	err error = nil
 )
 
 func Counter() int {

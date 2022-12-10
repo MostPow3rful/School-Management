@@ -12,7 +12,7 @@ import (
 )
 
 var (
-	err error
+	err error  = nil
 	PWD string = ""
 
 	// Database Object

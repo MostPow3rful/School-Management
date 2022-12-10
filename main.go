@@ -24,7 +24,7 @@ const (
 
 var (
 	// Error
-	err error
+	err error = nil
 
 	// Log Info
 	flags = log.Lshortfile
