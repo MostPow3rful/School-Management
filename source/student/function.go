@@ -1,12 +1,11 @@
 package student
 
 import (
-	"os"
-
 	"github.com/JesusKian/School-Management/source/config"
 	"github.com/fatih/color"
 	_ "github.com/go-sql-driver/mysql"
 
+	"os"
 	"encoding/json"
 	"errors"
 	"fmt"
