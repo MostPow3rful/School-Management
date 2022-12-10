@@ -13,7 +13,12 @@ Git
 ```
 
 #
-- First Of All, Go To Project's Directory
+- First Of All, Clone Repository
+```
+git clone https://github.com/JesusKian/School-Management.git
+```
+
+- Then Go To Project's Directory
 ```
 cd School-Management
 ```
