@@ -131,6 +131,11 @@ class Config(Color):
             "assets",
             "json",
             "log",
+            "source",
+            "source/student",
+            "source/employee",
+            "source/config",
+            "source/banner",
         )
 
         FILES: tuple = (
@@ -142,6 +147,12 @@ class Config(Color):
             "json/Secret.json",
             "json/Students.json",
             "requirements.txt",
+            "source/banner/function.go",
+            "source/config/function.go",
+            "source/employee/function.go",
+            "source/employee/struct.go",
+            "source/student/function.go",
+            "source/student/struct.go",
         )
 
         for directory in DIRS:
