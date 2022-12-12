@@ -224,13 +224,13 @@ class Config(Color):
         cursor.execute(
             "SELECT username, password FROM MYSQL_USER_PASS GROUP BY username, password"
         )
-        RESULT = cursor.fetchall()
+        RESULT = cursor.fetchall()[0]
 
         os.system('echo " " > log/log.log')
         with open(file="./json/Secret.json", mode="a") as file:
             file.write(
-                '{\n\t"username":"'+RESULT[0][0] +
-                '",\n\t"password":"'+RESULT[0][1]+'"\n}\n'
+                '{\n\t"username":"'+RESULT[0] +
+                '",\n\t"password":"'+RESULT[1]+'"\n}\n'
             )
 
     def _clear(self) -> None:
