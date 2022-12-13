@@ -17,26 +17,9 @@ import (
 
 // ------------------------------------------- Global Variable -------------------------------------------
 
-const (
-	// Detecting Client Platform
-	platform = runtime.GOOS
-)
+const platform = runtime.GOOS
 
-var (
-	// Error
-	err error = nil
-
-	// Log Info
-	flags = log.Lshortfile
-	// Sturct For Information Log
-	infoLog = log.New(os.Stdout, "[?] Information -> ", flags)
-	// Sturct For Warning Log
-	warnLog = log.New(os.Stdout, "[*] Warning -> ", flags)
-	// Sturct For Error Log
-	errorLog = log.New(os.Stdout, "[!] Error -> ", flags)
-	// Struct For Default Log
-	defaultLog = log.New(os.Stderr, "[#] Default Log -> ", flags)
-)
+var err error = nil
 
 // ------------------------------------------- MAIN -------------------------------------------
 
