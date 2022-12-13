@@ -32,7 +32,6 @@ while [ true ]; do
 
     # Get Distro
     read -p ">>> " DISTRO
-
     echo ""
 
     # Checking Packages
