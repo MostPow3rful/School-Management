@@ -19,18 +19,18 @@
 ##### ✍️ Actually, i'm Interested in Security and i'm Learning Web Bug Hunting So I thought it would be a SQL injection here When I'm Executing SQL Query With User input and i tried To Prevent SQL Injection In This Project
 
 ## 🏁 Installation:
-- 1️⃣ First Of All, Clone Repository
+- 1️⃣ Clone Repository
 ```
 git clone https://github.com/JesusKian/School-Management.git
 ```
 
-- 2️⃣ Then Go To Project's Directory
+- 2️⃣ Go To Project's Directory
 ```
 cd School-Management
 ```
 
 
-- 3️⃣ Then You Must Run Config File
+- 3️⃣ You Must Run Config File
 ```
 # Way (1) :
 python3 -m pip install -r requirements.txt
