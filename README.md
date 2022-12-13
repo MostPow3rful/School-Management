@@ -30,7 +30,7 @@ cd School-Management
 ```
 
 
-- 3️⃣ Then U Must Run Config File
+- 3️⃣ Then You Must Run Config File
 ```
 # Way (1) :
 python3 -m pip install -r requirements.txt
