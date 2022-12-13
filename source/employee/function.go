@@ -25,7 +25,7 @@ func Counter() int {
 	result, err := config.Database.Query("SELECT COUNT(*) FROM Employees")
 
 	if err != nil {
-		config.SetLog("E", "employee.employee.Counter() -> Couldn't Count Employees")
+		config.SetLog("E", "employee.Counter() -> Couldn't Count Employees")
 		config.SetLog("D", err.Error())
 		return -1
 	}
@@ -34,7 +34,7 @@ func Counter() int {
 		err = result.Scan(&count)
 
 		if err != nil {
-			config.SetLog("E", "employee.employee.Counter() -> Couldn't Scan Result Of Query")
+			config.SetLog("E", "employee.Counter() -> Couldn't Scan Result Of Query")
 			config.SetLog("D", err.Error())
 			return -1
 		}
@@ -53,7 +53,7 @@ func Add(FN string, LN string, A int, G string, R string, SK []string, Priv8 map
 	var hour, min, sec int = time.Now().Clock()
 
 	if A == 0 {
-		config.SetLog("E", "employee.employee.Add() -> Invalid Age")
+		config.SetLog("E", "employee.Add() -> Invalid Age")
 		return nil, errors.New("Add() -> Invalid Age")
 	}
 
@@ -72,7 +72,7 @@ func Add(FN string, LN string, A int, G string, R string, SK []string, Priv8 map
 	(?, ?, ?, ?, ?, ?, ?, ?)`, FN, LN, A, G, dbSK, R, dbPriv8, string(FN[0])+strconv.Itoa(hour)+strconv.Itoa(min)+strconv.Itoa(sec))
 
 	if err != nil {
-		config.SetLog("E", "employee.employee.Add() -> Couldn't Add Employee's Data In Database")
+		config.SetLog("E", "employee.Add() -> Couldn't Add Employee's Data In Database")
 		config.SetLog("D", err.Error())
 	}
 
@@ -119,7 +119,7 @@ func ShowSkill(ID string) {
 	result, err := config.Database.Query("SELECT Skill FROM Employees WHERE ID=?", ID)
 
 	if err != nil {
-		config.SetLog("E", "employee.employee.ShowSkill() -> Couldn't Get Employee's Skill")
+		config.SetLog("E", "employee.ShowSkill() -> Couldn't Get Employee's Skill")
 		config.SetLog("D", err.Error())
 	}
 
@@ -127,7 +127,7 @@ func ShowSkill(ID string) {
 		err = result.Scan(&skillValue)
 
 		if err != nil {
-			config.SetLog("E", "employee.employee.ShowSkill() -> Couldn't Scan Result Of Query")
+			config.SetLog("E", "employee.ShowSkill() -> Couldn't Scan Result Of Query")
 			config.SetLog("D", err.Error())
 		}
 	}
@@ -143,10 +143,10 @@ func EditFirstName(ID string, value string) {
 	_, err = config.Database.Query("UPDATE Employees SET FirstName=? WHERE ID=?", value, ID)
 
 	if err != nil {
-		config.SetLog("E", "employee.employee.EditFirstName() -> Couldn't Edit Employee's First Name With ID="+ID)
+		config.SetLog("E", "employee.EditFirstName() -> Couldn't Edit Employee's First Name With ID="+ID)
 		config.SetLog("D", err.Error())
 	} else {
-		config.SetLog("E", "employee.employee.EditFirstName() -> Employee With ID="+ID+" Changed First Name To "+value)
+		config.SetLog("E", "employee.EditFirstName() -> Employee With ID="+ID+" Changed First Name To "+value)
 	}
 }
 
@@ -154,10 +154,10 @@ func EditLastName(ID string, value string) {
 	_, err = config.Database.Query("UPDATE Employees SET LastName=? WHERE ID=?", value, ID)
 
 	if err != nil {
-		config.SetLog("E", "employee.employee.EditFirstName() -> Couldn't Edit Employee's Last Name With ID="+ID)
+		config.SetLog("E", "employee.EditFirstName() -> Couldn't Edit Employee's Last Name With ID="+ID)
 		config.SetLog("D", err.Error())
 	} else {
-		config.SetLog("E", "employee.employee.EditFirstName() -> Employee With ID="+ID+" Changed Last Name To "+value)
+		config.SetLog("E", "employee.EditFirstName() -> Employee With ID="+ID+" Changed Last Name To "+value)
 	}
 }
 
@@ -165,10 +165,10 @@ func EditAge(ID string, value int, stringValue string) {
 	_, err = config.Database.Query("UPDATE Employees SET Age=? WHERE ID=?", value, ID)
 
 	if err != nil {
-		config.SetLog("E", "employee.employee.EditAge() -> Couldn't Edit Employee's Age")
+		config.SetLog("E", "employee.EditAge() -> Couldn't Edit Employee's Age")
 		config.SetLog("D", err.Error())
 	} else {
-		config.SetLog("E", "employee.employee.EditAge() -> Employee With ID="+ID+" Changed Age To "+stringValue)
+		config.SetLog("E", "employee.EditAge() -> Employee With ID="+ID+" Changed Age To "+stringValue)
 	}
 }
 
@@ -176,10 +176,10 @@ func EditGender(ID string, value string) {
 	_, err = config.Database.Query("UPDATE Employees SET Gender=? WHERE ID=?", value, ID)
 
 	if err != nil {
-		config.SetLog("E", "employee.employee.EditGender() -> Couldn't Edit Employee's Gender With ID="+ID)
+		config.SetLog("E", "employee.EditGender() -> Couldn't Edit Employee's Gender With ID="+ID)
 		config.SetLog("D", err.Error())
 	} else {
-		config.SetLog("E", "employee.employee.EditGender() -> Employee With ID="+ID+" Changed Gender To "+value)
+		config.SetLog("E", "employee.EditGender() -> Employee With ID="+ID+" Changed Gender To "+value)
 	}
 }
 
@@ -193,7 +193,7 @@ func EditSkill(ID string, option string, value string) {
 	result, err := config.Database.Query("SELECT Skill FROM Employees WHERE ID=?", ID)
 
 	if err != nil {
-		config.SetLog("E", "employee.employee.EditSkill() -> Couldn't Get Employee's Skill With ID="+ID)
+		config.SetLog("E", "employee.EditSkill() -> Couldn't Get Employee's Skill With ID="+ID)
 		config.SetLog("D", err.Error())
 	}
 
@@ -201,7 +201,7 @@ func EditSkill(ID string, option string, value string) {
 		err = result.Scan(&skills)
 
 		if err != nil {
-			config.SetLog("E", "employee.employee.EditSkill() -> Couldn't Scan Result Of Query")
+			config.SetLog("E", "employee.EditSkill() -> Couldn't Scan Result Of Query")
 			config.SetLog("D", err.Error())
 		}
 	}
@@ -212,14 +212,14 @@ func EditSkill(ID string, option string, value string) {
 	case "1": // Add
 		result, err := config.Database.Query("SELECT COUNT(Skill) FROM Employees WHERE ID=?", ID)
 		if err != nil {
-			config.SetLog("E", "employee.employee.EditSkill() -> Couldn't Count Employee's Skill With ID="+ID)
+			config.SetLog("E", "employee.EditSkill() -> Couldn't Count Employee's Skill With ID="+ID)
 			config.SetLog("D", err.Error())
 		}
 
 		for result.Next() {
 			_, err = fmt.Scan(&skillsLen)
 			if err != nil {
-				config.SetLog("E", "employee.employee.EditSkill() -> Couldn't Get Length Of Student's Skill With ID="+ID)
+				config.SetLog("E", "employee.EditSkill() -> Couldn't Get Length Of Student's Skill With ID="+ID)
 				config.SetLog("D", err.Error())
 			}
 		}
@@ -228,7 +228,7 @@ func EditSkill(ID string, option string, value string) {
 		result, err = config.Database.Query("UPDATE Employees SET Skill=? WHERE ID=?", skills, ID)
 
 		if err != nil {
-			config.SetLog("E", "employee.employee.EditSkill() -> Couldn't Add New Employee's Skill With ID="+ID)
+			config.SetLog("E", "employee.EditSkill() -> Couldn't Add New Employee's Skill With ID="+ID)
 			config.SetLog("D", err.Error())
 		}
 
@@ -244,7 +244,7 @@ func EditSkill(ID string, option string, value string) {
 		result, err = config.Database.Query("UPDATE Employees SET Skill=? WHERE ID=?", skills, ID)
 
 		if err != nil {
-			config.SetLog("E", "employee.employee.EditSkill() -> Couldn't Remove Employee's Skill With ID="+ID)
+			config.SetLog("E", "employee.EditSkill() -> Couldn't Remove Employee's Skill With ID="+ID)
 			config.SetLog("D", err.Error())
 		}
 	}
@@ -254,10 +254,10 @@ func EditRank(ID string, value string) {
 	_, err = config.Database.Query("UPDATE Employees SET Rank=? WHERE ID=?", value, ID)
 
 	if err != nil {
-		config.SetLog("E", "employee.employee.EditRank() -> Couldn't Change Employee's Rank With ID="+ID)
+		config.SetLog("E", "employee.EditRank() -> Couldn't Change Employee's Rank With ID="+ID)
 		config.SetLog("D", err.Error())
 	} else {
-		config.SetLog("E", "employee.employee.EditRank() -> Employee With ID="+ID+" Changed Rank")
+		config.SetLog("E", "employee.EditRank() -> Employee With ID="+ID+" Changed Rank")
 	}
 }
 
@@ -270,7 +270,7 @@ func ShowPrivateInformation(ID string) {
 	result, err := config.Database.Query("SELECT Private FROM Employees WHERE ID=?", ID)
 
 	if err != nil {
-		config.SetLog("E", "employee.employee.ShowPrivateInformation() -> Couldn't Get Employee's Private Information With ID="+ID)
+		config.SetLog("E", "employee.ShowPrivateInformation() -> Couldn't Get Employee's Private Information With ID="+ID)
 		config.SetLog("D", err.Error())
 	}
 
@@ -278,7 +278,7 @@ func ShowPrivateInformation(ID string) {
 		err = result.Scan(&answers)
 
 		if err != nil {
-			config.SetLog("E", "employee.employee.ShowPrivateInformation() -> Couldn't Scan Result Of Query")
+			config.SetLog("E", "employee.ShowPrivateInformation() -> Couldn't Scan Result Of Query")
 			config.SetLog("D", err.Error())
 		}
 	}
@@ -299,7 +299,7 @@ func EditPrivateInformation(ID string, option string, key string, value string, 
 	result, err := config.Database.Query("SELECT Private From Employees Where ID=?", ID)
 
 	if err != nil {
-		config.SetLog("E", "employee.employee.EditPrivateInformation() -> Couldn't Get Employee's Private Information With ID="+ID)
+		config.SetLog("E", "employee.EditPrivateInformation() -> Couldn't Get Employee's Private Information With ID="+ID)
 		config.SetLog("D", err.Error())
 	}
 
@@ -307,7 +307,7 @@ func EditPrivateInformation(ID string, option string, key string, value string, 
 		err = result.Scan(&priv8)
 
 		if err != nil {
-			config.SetLog("E", "employee.employee.EditPrivateInformation() -> Couldn't Scan Employee's Private Information With ID="+ID)
+			config.SetLog("E", "employee.EditPrivateInformation() -> Couldn't Scan Employee's Private Information With ID="+ID)
 			config.SetLog("D", err.Error())
 		}
 	}
@@ -320,10 +320,10 @@ func EditPrivateInformation(ID string, option string, key string, value string, 
 		result, err = config.Database.Query("UPDATE Employees SET Private=? WHERE ID=?", priv8, ID)
 
 		if err != nil {
-			config.SetLog("E", "employee.employee.EditPrivateInformation() -> Couldn't Add New Private Information With ID="+ID)
+			config.SetLog("E", "employee.EditPrivateInformation() -> Couldn't Add New Private Information With ID="+ID)
 			config.SetLog("D", err.Error())
 		} else {
-			config.SetLog("E", "employee.employee.EditPrivateInformation() -> Employee With ID="+ID+" Added New Private Information "+key+":"+value)
+			config.SetLog("E", "employee.EditPrivateInformation() -> Employee With ID="+ID+" Added New Private Information "+key+":"+value)
 		}
 
 	case "2": // Edit
@@ -341,10 +341,10 @@ func EditPrivateInformation(ID string, option string, key string, value string, 
 		result, err = config.Database.Query("UPDATE Employees SET Private=? WHERE ID=?", priv8, ID)
 
 		if err != nil {
-			config.SetLog("E", "employee.employee.EditPrivateInformation() -> Couldn't Edit Employee's Private Information With ID="+ID)
+			config.SetLog("E", "employee.EditPrivateInformation() -> Couldn't Edit Employee's Private Information With ID="+ID)
 			config.SetLog("D", err.Error())
 		} else {
-			config.SetLog("E", "employee.employee.EditPrivateInformation() -> Employee With ID="+ID+" Edited Private Information Of "+strings.Split(tempSlice[index-1], ":")[0])
+			config.SetLog("E", "employee.EditPrivateInformation() -> Employee With ID="+ID+" Edited Private Information Of "+strings.Split(tempSlice[index-1], ":")[0])
 		}
 
 	case "3": // Remove
@@ -359,10 +359,10 @@ func EditPrivateInformation(ID string, option string, key string, value string, 
 		result, err = config.Database.Query("UPDATE Employees SET Private=? WHERE ID=?", priv8, ID)
 
 		if err != nil {
-			config.SetLog("E", "employee.employee.EditPrivateInformation() -> Couldn't Remove Employee's Private Information With ID="+ID)
+			config.SetLog("E", "employee.EditPrivateInformation() -> Couldn't Remove Employee's Private Information With ID="+ID)
 			config.SetLog("D", err.Error())
 		} else {
-			config.SetLog("E", "employee.employee.EditPrivateInformation() -> Employee With ID="+ID+" Removed Private Information")
+			config.SetLog("E", "employee.EditPrivateInformation() -> Employee With ID="+ID+" Removed Private Information")
 		}
 
 	}
@@ -371,10 +371,10 @@ func EditPrivateInformation(ID string, option string, key string, value string, 
 func Remove(ID string) {
 	_, err := config.Database.Query("DELETE FROM Employees WHERE ID=?", ID)
 	if err != nil {
-		config.SetLog("E", "employee.employee.Remove() -> Couldn't Remove Employee With ID="+ID)
+		config.SetLog("E", "employee.Remove() -> Couldn't Remove Employee With ID="+ID)
 		config.SetLog("D", err.Error())
 	} else {
-		config.SetLog("E", "employee.employee.Remove() -> Employee With ID="+ID+" Removed")
+		config.SetLog("E", "employee.Remove() -> Employee With ID="+ID+" Removed")
 	}
 }
 
@@ -393,7 +393,7 @@ func Show(ID string) {
 	result, err := config.Database.Query("SELECT * FROM Employees WHERE ID=?", ID)
 
 	if err != nil {
-		config.SetLog("E", "employee.employee.Show() -> Couldn't Get Employee's Info With ID="+ID)
+		config.SetLog("E", "employee.Show() -> Couldn't Get Employee's Info With ID="+ID)
 		config.SetLog("D", err.Error())
 	}
 
@@ -401,7 +401,7 @@ func Show(ID string) {
 		err = result.Scan(&FN, &LN, &A, &G, &SK, &R, &Priv8, &StudentID)
 
 		if err != nil {
-			config.SetLog("E", "employee.employee.Show() -> Couldn't Scan Result Of Query")
+			config.SetLog("E", "employee.Show() -> Couldn't Scan Result Of Query")
 			config.SetLog("D", err.Error())
 		}
 
@@ -441,7 +441,7 @@ func ShowAll() {
 	result, err := config.Database.Query("SELECT * FROM Employees")
 
 	if err != nil {
-		config.SetLog("E", "employee.employee.ShowAll() -> Couldn't Execute Query")
+		config.SetLog("E", "employee.ShowAll() -> Couldn't Execute Query")
 		config.SetLog("D", err.Error())
 	}
 
@@ -449,7 +449,7 @@ func ShowAll() {
 		err = result.Scan(&FN, &LN, &A, &G, &SK, &R, &Priv8, &StudentID)
 
 		if err != nil {
-			config.SetLog("E", "employee.employee.ShowAll() -> Couldn't Scan Result Of Query")
+			config.SetLog("E", "employee.ShowAll() -> Couldn't Scan Result Of Query")
 			config.SetLog("D", err.Error())
 		}
 
@@ -495,20 +495,20 @@ func JsonOutput() {
 	result, _ := config.Database.Query("SELECT * FROM Employees")
 
 	if err != nil {
-		config.SetLog("E", "employee.employee.JsonOutput() -> Couldn't Scan Result Of Query")
+		config.SetLog("E", "employee.JsonOutput() -> Couldn't Scan Result Of Query")
 		config.SetLog("D", err.Error())
 	}
 
 	err = os.WriteFile("json/Employees.json", []byte{'\n'}, 0644)
 	if err != nil {
-		config.SetLog("E", "employee.employee.JsonOutput() -> Couldn't Clear File")
+		config.SetLog("E", "employee.JsonOutput() -> Couldn't Clear File")
 		config.SetLog("D", err.Error())
 	}
 
 	file, err := os.OpenFile("json/Employees.json", os.O_APPEND|os.O_WRONLY, 0644)
 
 	if err != nil {
-		config.SetLog("E", "employee.employee.JsonOutput() -> Couldn't Open File"+config.PWD)
+		config.SetLog("E", "employee.JsonOutput() -> Couldn't Open File"+config.PWD)
 		config.SetLog("D", err.Error())
 	}
 
@@ -523,7 +523,7 @@ func JsonOutput() {
 		err = result.Scan(&FN, &LN, &A, &G, &SK, &R, &Priv8, &EmployeeID)
 
 		if err != nil {
-			config.SetLog("E", "employee.employee.JsonOutput() -> Couldn't Scan Result Of Query")
+			config.SetLog("E", "employee.JsonOutput() -> Couldn't Scan Result Of Query")
 			config.SetLog("D", err.Error())
 		}
 
@@ -547,7 +547,7 @@ func JsonOutput() {
 
 		res, err := json.Marshal(data)
 		if err != nil {
-			config.SetLog("E", "employee.employee.JsonOutput() -> Couldn't Convert Data To Json")
+			config.SetLog("E", "employee.JsonOutput() -> Couldn't Convert Data To Json")
 			config.SetLog("D", err.Error())
 		}
 		if Counter == 0 {
