@@ -51,4 +51,6 @@ go run ./main.go
 ./main
 ```
 
+- 📹 Watch Below Video
+
 [![asciicast](https://asciinema.org/a/qQfKMAr2DOTV4HJcO706ytprS.svg)](https://asciinema.org/a/qQfKMAr2DOTV4HJcO706ytprS)
