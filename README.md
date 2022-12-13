@@ -8,13 +8,13 @@
 - 5️⃣ Git
 
 ## 🦾 Features:
-- 🤘 App Contains Four Functionality : Create, Read, Update, Delete
-- 👊 Every Student/Employee Have Unique ID
-- 👌 Convert Students & Employees Data To JSON Format : You Can See Converted Data in JSON Directory
+- ⚙️ App Contains Four Functionality : Create, Read, Update, Delete
+- 🆔 Every Student/Employee Have Unique ID
+- 🔗 Convert Students & Employees Data To JSON Format : You Can See Converted Data in JSON Directory
 - 🔬 System Log : You Can See log in log/log.log
 
 ## 🛡 Security:
-- 🤙 Prevented SQL Injection
+- 💉 Prevented SQL Injection
 ##### ✍️ Actually, i'm Interested in Security and i'm Learning Web Bug Hunting So i I thought it would be a SQL injection here When I'm Executing SQL Query With User input and i tried To Prevent SQL Injection In This Project
 
 ## 🏁 Installation:
