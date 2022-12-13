@@ -16,7 +16,7 @@
 
 ## 🛡 Security:
 - 💉 Prevented SQL Injection
-##### ✍️ Actually, i'm Interested in Security and i'm Learning Web Bug Hunting So i I thought it would be a SQL injection here When I'm Executing SQL Query With User input and i tried To Prevent SQL Injection In This Project
+##### ✍️ Actually, i'm Interested in Security and i'm Learning Web Bug Hunting So I thought it would be a SQL injection here When I'm Executing SQL Query With User input and i tried To Prevent SQL Injection In This Project
 
 ## 🏁 Installation:
 - 1️⃣ First Of All, Clone Repository
