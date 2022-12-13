@@ -1,9 +1,6 @@
 # 🏫 School-Management
-### This Page Will be Update . . .
 
-#
-
-##👀 Requirements :
+## 👀 Requirements :
 ```
 Go
 Python
