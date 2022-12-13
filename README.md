@@ -10,7 +10,7 @@
 ## 🦾 Features:
 - ⚙️ App Contains Four Functionality : Create, Read, Update, Delete
 - 🆔 Every Student And Employee Have Unique ID
-- 🔗 Convert Students & Employees Data To JSON Format : You Can See Converted Data in JSON Directory
+- 🔗 Convert Students And Employees Data To JSON Format : You Can See Converted Data in JSON Directory
 - ✍️ System Log : You Can See log in log/log.log
 - 🤖 Automation Scripts To Config Your MySQL And Check [Files, Directories, Packages] : Written in 2 Diffrent Languages [Bash, Python]
 
