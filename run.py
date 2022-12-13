@@ -128,7 +128,6 @@ class Config(Color):
 
     def _check_directory_file(self) -> None:
         DIRS: tuple = (
-            "assets",
             "json",
             "log",
             "source",
