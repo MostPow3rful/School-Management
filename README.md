@@ -12,6 +12,7 @@
 - 🆔 Every Student/Employee Have Unique ID
 - 🔗 Convert Students & Employees Data To JSON Format : You Can See Converted Data in JSON Directory
 - ✍️ System Log : You Can See log in log/log.log
+- 🤖 Automation Scripts To Config Your MySQL And Check Files, Directories, Packages 
 
 ## 🛡 Security:
 - 💉 Prevented SQL Injection
