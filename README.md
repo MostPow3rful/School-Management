@@ -40,7 +40,7 @@ sudo chmod +x run.sh
 ./run.sh
 ```
 
-- 🎒 Now U Can Run Main File
+- 🎒 Now U Can Run The Project
 ```
 # Way (1) :
 go run ./main.go
