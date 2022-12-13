@@ -1,13 +1,11 @@
 # 🏫 School-Management
 
 ## 👀 Requirements :
-```
-Go
-Python
-Linux
-MySQL
-Git
-```
+- 1️⃣ Python >= 3.10.8
+- 2️⃣ Go >= 1.19.3
+- 3️⃣ Linux
+- 4️⃣ MySQL
+- 5️⃣ Git
 
 ## 🦾 Features:
 - 🤘 App Contains Four Functionality : Create, Read, Update, Delete
