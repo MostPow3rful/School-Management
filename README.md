@@ -1,9 +1,9 @@
-# School-Management
+# 🏫 School-Management
 ### This Page Will be Update . . .
 
 #
 
-## Requirements :
+##👀 Requirements :
 ```
 Go
 Python
@@ -13,18 +13,18 @@ Git
 ```
 
 #
-- First Of All, Clone Repository
+- 1️⃣ First Of All, Clone Repository
 ```
 git clone https://github.com/JesusKian/School-Management.git
 ```
 
-- Then Go To Project's Directory
+- 2️⃣ Then Go To Project's Directory
 ```
 cd School-Management
 ```
 
 
-- Then U Must Run Config File
+- 3️⃣ Then U Must Run Config File
 ```
 # Way (1) :
 python3 -m pip install -r requirements.txt
@@ -36,7 +36,7 @@ sudo chmod +x run.sh
 ./run.sh
 ```
 
-- Now U Can Run Main File
+- 🎒 Now U Can Run Main File
 ```
 # Way (1) :
 go run ./main.go
