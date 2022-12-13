@@ -50,3 +50,5 @@ go run ./main.go
 # Way (2) :
 ./main
 ```
+
+[![asciicast](https://asciinema.org/a/qQfKMAr2DOTV4HJcO706ytprS.svg)](https://asciinema.org/a/qQfKMAr2DOTV4HJcO706ytprS)
