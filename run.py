@@ -70,14 +70,18 @@ class Config(Color):
 
     def _check_mysql(self) -> bool:
         RESULT: str = subprocess.run(
-            "command -v mysql", shell=True, capture_output=True
+            "command -v mysql",
+            shell=True,
+            capture_output=True,
         ).stdout.decode()
 
         return False if RESULT is str() else True
 
     def _check_golang(self) -> bool:
         RESULT: str = subprocess.run(
-            "command -v go", shell=True, capture_output=True
+            "command -v go",
+            shell=True,
+            capture_output=True,
         ).stdout.decode()
 
         return False if RESULT is str() else True
